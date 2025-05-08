@@ -18,6 +18,10 @@ public class HangmanGameService {
   private static final int INITIAL_WRONG_GUESSES = 0;
   private static final String PLACEHOLDER_SYMBOL = "_";
 
+  public List<HangmanGame> getStoredGamesCollection() {
+    return storedGamesCollection;
+  }
+
   private List<HangmanGame> storedGamesCollection = new ArrayList<>();
 
   private GenericWordProvider wordProvider;

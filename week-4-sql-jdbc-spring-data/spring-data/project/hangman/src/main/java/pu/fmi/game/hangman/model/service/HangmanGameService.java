@@ -96,6 +96,11 @@ public class HangmanGameService implements GameService {
   }
 
   @Override
+  public List<HangmanGame> getLast10Games() {
+    return this.gameRepository.findFirst10ByOrderByStartedOnDateDesc();
+  }
+
+  @Override
   public List<HangmanGame> findAllByStatus(Status status){
     return gameRepository.findByStatus(status);
   }

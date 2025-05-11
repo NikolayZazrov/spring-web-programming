@@ -14,7 +14,7 @@ import pu.fmi.game.hangman.model.service.HangmanGameService;
 
 @RestController
 @RequestMapping("/hangman-games")
-public class HangmanGameRestApi {
+public class  HangmanGameRestApi {
 
   public final HangmanGameService hangmanGameService;
 
@@ -46,7 +46,7 @@ public class HangmanGameRestApi {
   // GET /hangman-games
   @GetMapping
   public List<HangmanGame> fetchAllGames() {
-    return hangmanGameService.getAllGames();
+    return hangmanGameService.getLast10Games();
   }
 
   // GET /hangman-games/status
